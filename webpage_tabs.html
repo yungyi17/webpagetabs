@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/webpage_tabs.css">
+</head>
+
+<body>
+<h2>Tabs</h2>
+<p>As you click a tab below, the contents belong to the tab will be displayed.<br>
+To close the contents under the current tab, click on the x button at the top right corner under the tab.</p>
+
+<div class="tab">
+    <button class="tablinks" id="defaultOpen">Countries</button>
+    <button class="tablinks" id="citiesTab">Cities</button>
+    <button class="tablinks" id="statesTab">US States</button>
+</div>
+
+<div id="Countries" class="tabcontent">
+    <span class="topright">&times</span>
+    <h3>Countries</h3>
+    <p>
+        The list of the contries in the world:
+        <ul>
+            <li>United States</li>
+            <li>Korea</li>
+            <li>England</li>
+            <li>Brazil</li>
+            <li>France</li>
+            <li>Italy</li>
+        </ul>
+    </p>
+</div>
+
+<div id="Cities" class="tabcontent">
+    <span class="topright">&times</span>
+    <h3>Cities</h3>
+    <p>
+        Major cities of some countries:
+        <ol>
+            <li>New York</li>
+            <li>Loa Angeles</li>
+            <li>Houston</li>
+            <li>Paris</li>
+            <li>Rome</li>
+            <li>Seoul</li>
+            <li>London</li>
+        </ol>
+    </p> 
+</div>
+
+<div id="USStates" class="tabcontent">
+    <span class="topright">&times</span>
+    <h3>US States</h3>
+    <p>
+        The states of the US:
+        <ul>
+            <li>Arkansas</li>
+            <li>Alaska</li>
+            <li>Texas</li>
+            <li>New York</li>
+            <li>California</li>
+        </ul>
+    </p>
+</div>
+<div id="emptyTab"></div>
+<script src="js/webpage_tabs.js"></script>
+</body>
+</html> 
