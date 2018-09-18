@@ -4,18 +4,21 @@ $(document).ready(function() {
     });
 
     $("button.tablinks").click(function(event) {
-        var cityId = $(this).attr("id");
-        var cityName = $("#" + cityId).text();
-        var blankPos = cityName.search(" ");
+        var buttonTabId = $(this).attr("id");
+        var tabName = $("#" + buttonTabId).text();
+        // Find the tab name that include a blank and take the blank away
+        // to find an id for the section that belongs to
+        var blankPos = tabName.search(" ");
         var i, tablinks;
 
         if (blankPos != -1) {
-            var arr = cityName.split(" ");
-            cityName = arr[0] + arr[1];
+            // Create an array for the tab name that includes a blank
+            var arr = tabName.split(" ");
+            // Take away a blank from city name and concateante as one word for an element id
+            tabName = arr[0] + arr[1];
         }
-
-        //$("div.tab").children().attr("class").replace(" active", "");
         
+        // Don't display div tab(s) before emptyTab id
         $("div.tab").nextUntil("#emptyTab").css("display", "none");
 
         tablinks = document.getElementsByClassName("tablinks");
@@ -23,8 +26,8 @@ $(document).ready(function() {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
 
-        //document.getElementById(cityName).style.display = "block";
-        $("#" + cityName).css("display", "block");
+        // Find the tab name as an id
+        $("#" + tabName).css("display", "block");
         event.currentTarget.className += " active";
     });
 
